@@ -1,0 +1,33 @@
+<html>
+	<body class="global">
+		<div class="menu">
+			<span class="hooty global">Hooty</span>
+			<span class="blowfish">Blowfish</span>
+		</div>	
+		<script>
+
+var _getElementsByClassName = function(classy) {
+	var node = document.body;
+	var res = [];
+
+	function f(n) {
+		if(n.className.match(classy)) {
+			res.push(n);
+		}
+		if(n.children && (n.children.length > 0)) {
+			for(i=0; i<n.children.length; i++) {
+				f(n.children[i]);	
+			}
+		}
+	}
+
+	f(node);
+	return(res);
+};
+
+var a = _getElementsByClassName('global');
+console.log(a);
+
+		</script>
+	</body>
+</html>
