@@ -1,5 +1,7 @@
 var util = require('util');
 
+// O(log n)
+
 var TrieNode = function(val) {
 	this.parent = null;
 	this.value = val;
