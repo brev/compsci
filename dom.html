@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <body>
+    <div id="vito">Hello</div>
+    <script>
+      var old = document.getElementById('vito');
+      var oldbak = old.cloneNode(true); 
+      
+      var newEl = document.createElement('span');
+      newEl.innerHTML = 'word'; 
+      document.body.insertBefore(newEl, old);
+     
+      var newEl2 = document.createElement('span');
+      newEl2.innerHTML = 'bwak'; 
+      document.body.appendChild(newEl2); 
+
+      document.body.removeChild(old);
+      document.body.appendChild(oldbak);
+    </script>
+  </body>
+</html>
